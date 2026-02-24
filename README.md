@@ -34,4 +34,11 @@ Runs a parameter sweep over:
 
 - **Confidence:** 0.1 → 0.9  
 - **IoU threshold:** 0.1 → 0.9
+
+### 3) webcam mode
 ```
+bash
+python practical_activity_local.py --webcam
+
+```
+- Runs YOLO on webcam feed

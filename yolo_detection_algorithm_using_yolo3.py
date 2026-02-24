@@ -284,12 +284,12 @@ def main() -> int:
         if src is None:
             raise FileNotFoundError(f"Could not read: {src_path}")
 
-        for c in confidence_values:
-            for t in threshold_values:
-                print(f"\n--- Running detection with CONFIDENCE={c}, THRESHOLD={t} ---")
-                yolo = YOLO(yolo_dir, c, t)
+        for confidencce in confidence_values:
+            for threshold in threshold_values:
+                print(f"\n--- Running detection with CONFIDENCE={confidencce}, THRESHOLD={threshold} ---")
+                yolo = YOLO(yolo_dir, confidencce, threshold)
                 out = yolo.detect(src)
-                out_path = results_dir / f"baggage_claim_conf{c}_thr{t}.jpg"
+                out_path = results_dir / f"baggage_claim_conf{confidencce}_thr{threshold}.jpg"
                 cv2.imwrite(str(out_path), out)
                 print(f"[OK] wrote {out_path}")
     else:
