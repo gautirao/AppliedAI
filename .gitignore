@@ -62,7 +62,7 @@ Icon?
 # Project-specific: downloaded data + generated outputs
 # (Your script can download/extract these into ./data)
 # ------------------------------------------------------------
-data/
+image-detection/data/
 
 # Downloaded sample images (reproducible downloads; binary)
 data/*.jpg
